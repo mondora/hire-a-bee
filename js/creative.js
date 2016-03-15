@@ -48,82 +48,10 @@
     // Form
     var container = $('#containerErrorForm');
 
-    $("#contact-form").validator();
-
-    $("#contact-form").validator({
-        messages: {
-            first_name: "Inserisci il nome",
-            last_name: "Inserisci il cognome",
-            email: {
-                required: "Inserisci un indirizzo email valido",
-                email: "Inserisci un indirizzo email valido"
-            },
-            custom_email_address_hire: {
-                required: "Inserisci un indirizzo email valido",
-                email: "Inserisci un indirizzo email valido"
-            },
-            message: "Inserisci il testo del messaggio",
-            agree: "Dai il consenso per il trattamento dei dati personali<br />"
+    $("#contact-form").validator().on('submit', function (e) {
+        if (e.isDefaultPrevented()) {
+            $('#containerErrorForm').show();
         }
-    });
-
-    // $("#contact-form").validator({
-    //     framework: 'bootstrap',
-    //     err: {
-    //         container: 'tooltip'
-    //     },
-    //     icon: {
-    //         valid: 'glyphicon glyphicon-ok',
-    //         invalid: 'glyphicon glyphicon-remove',
-    //         validating: 'glyphicon glyphicon-refresh'
-    //     },
-    //     errorContainer: container,
-    //     errorLabelContainer: $("ul", container),
-    //     wrapper: 'li',
-    //     meta: "validate",
-    //     rules: {
-    //         firstName: "required",
-    //         lastName: "required",
-    //         emailAddress: {
-    //             required: true,
-    //             email: true
-    //         },
-    //         emailAddressHire: {
-    //             required: true,
-    //             email: true
-    //         },
-    //         message: "required",
-    //         agree: "required"
-    //     },
-    //     highlight: function(element) {
-    //         $(element).closest('.form-group').addClass('has-error');
-    //     },
-    //     unhighlight: function(element) {
-    //         $(element).closest('.form-group').removeClass('has-error');
-    //     },
-    //     errorElement: 'span',
-    //     errorClass: 'help-block',
-    //     errorPlacement: function(error, element) {
-    //         if(element.parent('.input-group').length) {
-    //             error.insertAfter(element.parent());
-    //         } else {
-    //             error.insertAfter(element);
-    //         }
-    //     },
-    //     messages: {
-    //         firstName: "Inserisci il nome",
-    //         lastName: "Inserisci il cognome",
-    //         emailAddress: {
-    //             required: "Inserisci un indirizzo email valido",
-    //             email: "Inserisci un indirizzo email valido"
-    //         },
-    //         emailAddressHire: {
-    //             required: "Inserisci un indirizzo email valido",
-    //             email: "Inserisci un indirizzo email valido"
-    //         },
-    //         message: "Inserisci il testo del messaggio",
-    //         agree: "Dai il consenso per il trattamento dei dati personali<br />"
-    //     }
-    // });
+    })
 
 })(jQuery); // End of use strict
