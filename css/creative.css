@@ -98,6 +98,15 @@ p {
     color: #2F5679;
     font-size: 20px;
 }
+@media (max-width:768px) {
+    .text-22 {
+      font-size: 18px;
+    }
+    .text-28 {
+      font-size: 22px;
+      line-height: 30px;
+    }
+}
 section {
   padding: 100px 0;
 }
@@ -243,7 +252,6 @@ header .header-content .header-content-inner p {
 }
 .section-heading {
   margin-top: 0;
-  font-style: normal !important;
 }
 #about {
     color: #2F5679;
@@ -260,7 +268,7 @@ header .header-content .header-content-inner p {
     right: 20px;
 }
 @media (max-width: 768px) {
-    #profiles .carousel-control {
+    #profiles .carousel-control.left {
         display: none;
     }
 }
@@ -360,11 +368,16 @@ header .header-content .header-content-inner p {
     line-height: 106px;
     vertical-align: middle;
 }
+@media (min-width: 992px) {
+    .payment {
+        font-size: 65px;
+    }
+}
 .payment {
     display: block;
     border: 1px solid white;
     border-radius: 20px;
-    font-size: 65px;
+    font-size: 40px;
     font-weight: 600;
     font-style: normal;
     padding: 10px 0;
@@ -376,12 +389,21 @@ header .header-content .header-content-inner p {
     min-height: auto;
 }
 .rules h2 {
-    font-size: 30px !important;
+    font-size: 28px;
 }
 .rules p, .rules ul {
-    font-size: 20px;
+    font-size: 16px;
     font-weight: 300;
 }
+@media (min-width: 992px) {
+    .rules h2 {
+        font-size: 30px;
+    }
+    .rules p, .rules ul {
+        font-size: 20px;
+    }
+}
+
 #contact {
     color: #2F5679;
 }
