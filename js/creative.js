@@ -5,6 +5,11 @@
  */
 
 (function($) {
+
+    $('.carousel').carousel({
+      interval: 6000
+    })
+
     "use strict"; // Start of use strict
 
     // jQuery for page scrolling feature - requires jQuery Easing plugin

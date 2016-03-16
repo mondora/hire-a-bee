@@ -48,14 +48,14 @@ p {
   margin-bottom: 20px;
 }
 .logo-mondora img {
-    padding: 20px 0px;
-    width: 60px;
+    padding: 15px 0px;
+    width: 50px;
     height: auto;
 }
 @media (min-width:768px) {
     .logo-mondora img {
-        padding: 15px;
-        width: 110px;
+        padding: 15px 0px;
+        width: 70px;
         height: auto;
     }
 }
@@ -83,7 +83,6 @@ p {
     color: #2F5679;
 }
 .text-22 {
-  color: white;
   font-style: normal;
   font-weight: 300;
   font-size: 22px;
@@ -128,8 +127,9 @@ aside {
     padding: 0px 15px !important;
 }
 .navbar-default .navbar-header .navbar-brand img {
-    width: 215px;
-    padding: 15px 0;
+    width: 200px;
+    padding: 10px 0;
+    margin-left: -15px;
 }
 .navbar-default .navbar-header .navbar-brand:hover,
 .navbar-default .navbar-header .navbar-brand:focus {
@@ -166,6 +166,7 @@ aside {
   }
   .navbar-default .navbar-header .navbar-brand img {
     width: 260px;
+    margin-left: 0px;
   }
   .navbar-default.affix {
     background-color: white;
@@ -244,6 +245,9 @@ header .header-content .header-content-inner p {
   margin-top: 0;
   font-style: normal !important;
 }
+#about {
+    color: #2F5679;
+}
 #profiles {
     padding: 100px 0;
 }
@@ -255,12 +259,17 @@ header .header-content .header-content-inner p {
     top: 0px;
     right: 20px;
 }
+@media (max-width: 768px) {
+    #profiles .carousel-control {
+        display: none;
+    }
+}
 #profiles .carousel-control {
     background: none;
     background-color: #2F5679;
     -webkit-clip-path: polygon(50% 0, 100% 25%, 100% 75%, 50% 100%, 0 75%, 0 25%);
     color: white;
-    font-size: 24px;
+    font-size: 20px;
     line-height: 43px;
     text-shadow: none;
     height: 45px;
@@ -352,6 +361,7 @@ header .header-content .header-content-inner p {
     vertical-align: middle;
 }
 .payment {
+    display: block;
     border: 1px solid white;
     border-radius: 20px;
     font-size: 65px;
@@ -570,6 +580,10 @@ footer a {
   }
   footer .btn-social {
     float: none;
+    margin-left: 4px;
+    width: 40px;
+    height:46px;
+    line-height: 56px;
   }
 }
 .btn-social {
