@@ -7,7 +7,7 @@
 (function($) {
 
     $('.carousel').carousel({
-      interval: 6000
+      interval: false
     })
 
     "use strict"; // Start of use strict
